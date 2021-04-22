@@ -1,0 +1,32 @@
+# 1
+fruit = ('apple', 'pear', 'cherry', 'banana', 12)
+vegetables = ['tomato', 'onion', 'carrot', 17]
+berries = ('blueberry', 'cranberry', 'watermelon', 8)
+
+    # В овощи забыли добавить капусту. Цифра в категории - это цена товара этого типа.
+vegetables.insert (3, 'cabbage')
+print (vegetables)
+
+
+    # На склад поступил новый товар. Надо пересмотреть склад и исправить ошибки, сделать первую товара букву заглавной.
+fruit_title= str(fruit)
+vegetables_title= str(vegetables)
+berries_title= str(berries)
+
+print (fruit_title.title())
+print (vegetables_title.title())
+print (berries_title.title())
+
+    # Все типы товаров должны быть неизменяемыми, чтобы кто-то случайно не перепутал их снова.
+vegetables_tuple= tuple(vegetables_title.title())
+print(vegetables_tuple)
+
+    # 2.
+    #  Для удобства хранения, нужно объединить все товары в один объект, при этом сохранить структуру типов.
+goods={'fruit': (fruit_title.title()), 'vegetables': (vegetables_title.title()), 'berries': (berries_title.title()) }
+print(goods)
+
+    # 3.
+    #  На складе закончились морковка и арбузы. Надо перенести их в категорию "finished".
+finished = (vegetables[2], berries[2])
+print ("Finished:", finished)
